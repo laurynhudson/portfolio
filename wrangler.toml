@@ -1,14 +1,13 @@
 # Wrangler configuration for Cloudflare Pages deployment
 name = "lauryn-portfolio"
 compatibility_date = "2023-06-19"
+main = ".vercel/output/static/_worker.js/index.js"
 
 [build]
   command = "npm run build"
-  output_directory = ".next"
 
 [site]
-  bucket = ".next"
-  entry-point = "./"
+  bucket = ".vercel/output/static"
 
 [env.production]
   NODE_ENV = "production"
