@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 26, 26, 26;
+  --background-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  @apply font-sans;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply container mx-auto px-6 sm:px-8 lg:px-12 max-w-screen-xl;
+  }
+  
+  .heading-xl {
+    @apply font-serif text-4xl md:text-5xl lg:text-6xl font-light tracking-tight;
+  }
+  
+  .heading-lg {
+    @apply font-serif text-3xl md:text-4xl font-light tracking-tight;
+  }
+  
+  .heading-md {
+    @apply font-serif text-2xl md:text-3xl font-light;
+  }
+  
+  .heading-sm {
+    @apply font-serif text-xl md:text-2xl font-light;
+  }
+  
+  .body-text {
+    @apply font-sans text-sm md:text-base text-text-secondary leading-relaxed tracking-wide;
+  }
+
+  .uppercase-label {
+    @apply uppercase tracking-widest text-xs font-sans font-medium;
+  }
+  
+  .section {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+
+  .btn-primary {
+    @apply inline-block text-white bg-gradient-to-r from-accent to-accent-secondary hover:opacity-90 px-8 py-3 uppercase tracking-widest text-xs font-medium transition-all duration-300;
+  }
+
+  .btn-secondary {
+    @apply inline-block text-accent border border-accent hover:bg-gradient-to-r hover:from-accent/5 hover:to-accent-secondary/5 px-8 py-3 uppercase tracking-widest text-xs font-medium transition-all duration-300;
+  }
+
+  .portfolio-item-overlay {
+    @apply absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 hover:opacity-100 transition-all duration-300;
+  }
+  
+  .text-gradient {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-secondary;
+  }
+}
