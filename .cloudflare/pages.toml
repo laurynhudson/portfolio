@@ -1,0 +1,8 @@
+# Cloudflare Pages configuration
+[build]
+  command = "npm run pages:build"
+  publish = "out"
+  node_compat = true
+
+[site]
+  bucket = "out"
