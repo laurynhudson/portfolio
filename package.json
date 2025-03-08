@@ -8,8 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "deploy": "npx wrangler pages deploy out --commit-dirty=true",
-    "preview": "npx wrangler pages dev out"
+    "deploy": "wrangler pages project create lauryn-portfolio --production-branch=main || true && wrangler pages deploy out"
   },
   "dependencies": {
     "autoprefixer": "^10.4.14",
