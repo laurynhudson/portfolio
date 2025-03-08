@@ -33,3 +33,8 @@ if [ ! -z "$DEPLOY_URL" ]; then
   echo "Your portfolio is now live at: $DEPLOY_URL"
 fi
 echo "You can also access it at: https://lauryn-portfolio.pages.dev"
+
+# Inform about custom domain setup
+echo ""
+echo "To set up your custom domain laurynhudson.com:"
+echo "Run ./setup-domain.sh to see detailed instructions"
