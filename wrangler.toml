@@ -2,5 +2,5 @@
 name = "lauryn-portfolio"
 compatibility_date = "2023-06-19"
 
-# This is only used for the Workers configuration which we're not using
-# Keep this file for compatibility, actual Pages config is in .cloudflare/pages.toml
+# Pages configuration
+pages_build_output_dir = "out"
