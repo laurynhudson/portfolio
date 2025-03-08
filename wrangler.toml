@@ -2,4 +2,5 @@
 name = "lauryn-portfolio"
 compatibility_date = "2023-06-19"
 
-# Use Pages deployment instead of Workers
+# This is only used for the Workers configuration which we're not using
+# Keep this file for compatibility, actual Pages config is in .cloudflare/pages.toml
