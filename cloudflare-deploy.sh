@@ -12,6 +12,6 @@ if [ $? -ne 0 ]; then
 fi
 
 echo "Build successful, deploying to Cloudflare Pages..."
-npx wrangler pages publish out
+npm run deploy
 
 echo "Deployment complete!"

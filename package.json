@@ -8,9 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "pages:build": "next build",
-    "pages:deploy": "npm run pages:build && npx wrangler pages publish out",
-    "pages:preview": "npx wrangler pages dev out"
+    "deploy": "npx wrangler pages publish out --commit-dirty=true",
+    "preview": "npx wrangler pages dev out"
   },
   "dependencies": {
     "autoprefixer": "^10.4.14",
