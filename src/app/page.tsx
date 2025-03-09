@@ -101,19 +101,17 @@ export default function Home() {
           <div className="md:col-span-7">
             <div className="space-y-6">
               <p className="body-text">
-              I’m a passionate Software Engineer with a strong background in full-stack development, AI, and data engineering. 
-              Currently, I work at JP Morgan (via OpenInvest), where I develop fintech and ESG solutions, 
-              focusing on scalable, data-driven applications that drive impact in sustainable investing for Asset & Wealth Management advisors.
+                When I’m not coding, you’ll likely find me hiking, reading by the beach, discovering new restaurants, or traveling to new countries—always chasing adventure in some form.
               </p>
               <p className="body-text">
-                In my years of experience I've developed a deep understanding of building scalable applications, 
-                working with distributed systems, and writing clean, maintainable code.
+                I love staying active, and right now, I’m competing in a spring flag football league with friends. Long runs (10+ miles, just for fun) are my reset button—I thrive on the balance of discipline and freedom they bring. Movement is my meditation, and no matter how the day goes, I always find my way back to my yoga mat.
               </p>
               <p className="body-text">
-                I'm passionate about building applications with real world impact and solving complex technical challenges. 
-                When I'm not coding, you might find me hiking, reading at the beach, exploring new restaurants, or traveling to different countries.
+                I have a deeply adventurous spirit. Whether it’s exploring hidden gems in LA or experiencing new cultures abroad, I’m always seeking something new. This summer, I’m especially excited to see the Cowboy Carter Tour in France—because why not mix travel with a little Beyoncé magic?
               </p>
-              
+              <p className="body-text">
+                At the core of everything I do is a belief in continuous self-growth—physically, mentally, and spiritually. That’s what keeps life fulfilling.
+              </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
                 <div>
                   <h3 className="uppercase-label text-accent mb-2">Location</h3>
