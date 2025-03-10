@@ -54,7 +54,7 @@ export default function Home() {
                 </div>
                 <div className="absolute -bottom-3 -right-3 w-16 h-16 md:w-24 md:h-24 bg-gradient-to-br from-accent to-accent-secondary flex items-center justify-center">
                   <div className="text-center text-white">
-                    <div className="font-serif text-xl md:text-2xl font-light">4+</div>
+                    <div className="font-serif text-xl md:text-2xl font-light">5+</div>
                     <div className="uppercase-label text-white/80 text-3xs md:text-2xs mt-0.5">Years Experience</div>
                   </div>
                 </div>
@@ -150,6 +150,54 @@ export default function Home() {
         subtitle="My professional journey in software engineering across industry-leading companies"
       >
         <div className="grid grid-cols-1 gap-16">
+          {/* Smartres */}
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+            <div className="md:col-span-4">
+              <h3 className="heading-sm mb-2">Smartres.ai</h3>
+              <div className="uppercase-label text-accent mb-4">December 2024 - Present</div>
+            </div>
+            
+            <div className="md:col-span-8">
+              <h4 className="heading-sm mb-4">Cofounder + CTO</h4>
+              <p className="body-text mb-6">
+              Building AI-powered tools to help job seekers optimize their resumes and land their dream roles.
+              </p>
+              
+              <div className="space-y-6">
+                <div>
+                  <h5 className="uppercase-label text-accent mb-2">Responsibilities</h5>
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <span className="text-accent mr-3">•</span>
+                      <span className="body-text">Design and lead full stack development of SmartRes.ai, an AI-driven resume optimization platform that provides users with job specific resume tailoring, application tracking, and an interview simulator</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-accent mr-3">•</span>
+                      <span className="body-text">Manage continuous deployment and infrastructure using AWS, Docker, and CI/CD pipelines</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-accent mr-3">•</span>
+                      <span className="body-text">Conducted user research to refine the product experience, iterating based on feedback to maximize effectiveness</span>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h5 className="uppercase-label text-accent mb-2">Technologies</h5>
+                  <div className="flex flex-wrap gap-2">
+                    {['Python', 'Flask', 'OpenAI API', 'React', 'TypeScript', 'MySQL', 'AWS', 'Docker'].map((tech) => (
+                      <span key={tech} className="px-3 py-1 text-xs border border-gray-200 bg-white">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="w-full h-px bg-gray-200"></div>
+          
           {/* JP Morgan */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
             <div className="md:col-span-4">
@@ -186,54 +234,6 @@ export default function Home() {
                   <h5 className="uppercase-label text-accent mb-2">Technologies</h5>
                   <div className="flex flex-wrap gap-2">
                     {['Python', 'FastAPI', 'React', 'TypeScript', 'MYSQL', 'GraphQL', 'AWS', 'Docker'].map((tech) => (
-                      <span key={tech} className="px-3 py-1 text-xs border border-gray-200 bg-white">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div className="w-full h-px bg-gray-200"></div>
-          
-          {/* Amazon */}
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
-            <div className="md:col-span-4">
-              <h3 className="heading-sm mb-2">Smartres.ai</h3>
-              <div className="uppercase-label text-accent mb-4">December 2024 - Present</div>
-            </div>
-            
-            <div className="md:col-span-8">
-              <h4 className="heading-sm mb-4">Cofounder + CTO</h4>
-              <p className="body-text mb-6">
-              Building AI-powered tools to help job seekers optimize their resumes and land their dream roles.
-              </p>
-              
-              <div className="space-y-6">
-                <div>
-                  <h5 className="uppercase-label text-accent mb-2">Responsibilities</h5>
-                  <ul className="space-y-3">
-                    <li className="flex items-start">
-                      <span className="text-accent mr-3">•</span>
-                      <span className="body-text">Design and lead full stack development of SmartRes.ai, an AI-driven resume optimization platform that provides users with job specific resume tailoring, application tracking, and an interview simulator</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-accent mr-3">•</span>
-                      <span className="body-text">Manage continuous deployment and infrastructure using AWS, Docker, and CI/CD pipelines</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-accent mr-3">•</span>
-                      <span className="body-text">Conducted user research to refine the product experience, iterating based on feedback to maximize effectiveness</span>
-                    </li>
-                  </ul>
-                </div>
-                
-                <div>
-                  <h5 className="uppercase-label text-accent mb-2">Technologies</h5>
-                  <div className="flex flex-wrap gap-2">
-                    {['Python', 'Flask', 'OpenAI API', 'React', 'TypeScript', 'MySQL', 'AWS', 'Docker'].map((tech) => (
                       <span key={tech} className="px-3 py-1 text-xs border border-gray-200 bg-white">
                         {tech}
                       </span>
