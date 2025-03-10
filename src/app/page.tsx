@@ -71,16 +71,16 @@ export default function Home() {
         subtitle="Engineer | Travel Lover | Certified Yoga Teacher"
         className="bg-muted"
       >
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-          <div className="md:col-span-5 relative">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+          <div className="md:col-span-4 relative">
             <div className="relative">
-              <div className="aspect-square relative overflow-hidden">
+              <div className="aspect-[4/5] relative overflow-hidden">
                 <Image 
                   src="/assets/travel.png" 
                   alt="About Lauryn Hudson"
                   fill
                   className="object-cover object-center"
-                  sizes="(max-width: 768px) 100vw, 40vw"
+                  sizes="(max-width: 768px) 100vw, 33vw"
                   priority
                 />
               </div>
@@ -98,19 +98,19 @@ export default function Home() {
             <div className="absolute -bottom-10 -left-10 w-32 h-32 md:w-48 md:h-48 bg-gradient-to-br from-accent-secondary/10 to-accent/10 z-[-1]"></div>
           </div>
           
-          <div className="md:col-span-7">
+          <div className="md:col-span-8">
             <div className="space-y-6">
               <p className="body-text">
-                When I’m not coding, you’ll likely find me hiking, reading by the beach, discovering new restaurants, or traveling to new countries—always chasing adventure in some form.
+                When I'm not coding, you'll likely find me hiking, reading by the beach, discovering new restaurants, or traveling to new countries—always chasing adventure in some form.
               </p>
               <p className="body-text">
-                I love staying active, and right now, I’m competing in a spring flag football league with friends. Long runs (10+ miles, just for fun) are my reset button—I thrive on the balance of discipline and freedom they bring. Movement is my meditation, and no matter how the day goes, I always find my way back to my yoga mat.
+                I love staying active, and right now, I'm competing in a spring flag football league with friends. Long runs (10+ miles, just for fun) are my reset button—I thrive on the balance of discipline and freedom they bring. Movement is my meditation, and no matter how the day goes, I always find my way back to my yoga mat.
               </p>
               <p className="body-text">
-                I have a deeply adventurous spirit. Whether it’s exploring hidden gems in LA or experiencing new cultures abroad, I’m always seeking something new. This summer, I’m especially excited to see the Cowboy Carter Tour in France—because why not mix travel with a little Beyoncé magic?
+                I have a deeply adventurous spirit. Whether it's exploring hidden gems in LA or experiencing new cultures abroad, I'm always seeking something new. This summer, I'm especially excited to see the Cowboy Carter Tour in France—because why not mix travel with a little Beyoncé magic?
               </p>
               <p className="body-text">
-                At the core of everything I do is a belief in continuous self-growth—physically, mentally, and spiritually. That’s what keeps life fulfilling.
+                At the core of everything I do is a belief in continuous self-growth—physically, mentally, and spiritually. That's what keeps life fulfilling.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
                 <div>
@@ -375,12 +375,96 @@ export default function Home() {
         subtitle="A selection of my recent work showcasing my technical skills and problem-solving approach"
       >
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
+          {/* SmartRes.ai */}
           <div className="md:col-span-6">
             <div className="relative group cursor-pointer overflow-hidden">
               <div className="aspect-[4/3] relative">
                 <Image 
+                  src="/assets/smartres.png" 
+                  alt="SmartRes.ai Platform"
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
+              <div className="portfolio-item-overlay">
+                <div className="text-center px-6">
+                  <h3 className="heading-sm text-white">AI Powered Platform for Job Seekers</h3>
+                </div>
+              </div>
+            </div>
+            <div className="mt-6">
+              <span className="uppercase-label text-accent mb-2 inline-block">Web App</span>
+              <h3 className="heading-sm mb-4">SmartRes.ai</h3>
+              <p className="body-text mb-6">
+                An AI-powered resume optimization tool that customizes resumes to match job descriptions using OpenAI's GPT API. SmartRes.ai helps job seekers tailor their applications with precision by analyzing job postings and restructuring resumes for better alignment. Features include AI-driven resume enhancements, applications management, and an interview simulator.
+              </p>
+              <div className="flex flex-wrap gap-3 mb-6">
+                {['TypeScript', 'React', 'Python', 'Flask', 'OpenAI API', 'AWS'].map((tech) => (
+                  <span key={tech} className="px-3 py-1 text-xs border border-gray-200 bg-white">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+              <div className="flex gap-6">
+                <a href="https://smartres.ai/" className="uppercase-label text-accent hover:underline flex items-center">
+                  <span>View Demo</span>
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          {/* MOVE */}
+          <div className="md:col-span-6">
+            <div className="relative group cursor-pointer overflow-hidden">
+              <div className="aspect-[4/3] relative">
+                <Image 
+                  src="/assets/mockup.png" 
+                  alt="MOVE Wellness Club App"
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
+              <div className="portfolio-item-overlay">
+                <div className="text-center px-6">
+                  <h3 className="heading-sm text-white">The First Social Media Designed to Take You Offline</h3>
+                </div>
+              </div>
+            </div>
+            <div className="mt-6">
+              <span className="uppercase-label text-accent mb-2 inline-block">Mobile App</span>
+              <h3 className="heading-sm mb-4">MOVE Wellness Club</h3>
+              <p className="body-text mb-6">
+                Coming soon: MOVE is a mobile app and community that allows users to connect in a fun, social, wellness focused way. Users can post their "Moves" (events/activities) so that other users are able to join, bringing together large groups for things such as hikes, runs, games, etc.
+              </p>
+              <div className="flex flex-wrap gap-3 mb-6">
+                {['React Native', 'TypeScript', 'Node.js', 'Firebase', 'MapBox API'].map((tech) => (
+                  <span key={tech} className="px-3 py-1 text-xs border border-gray-200 bg-white">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+              <div className="flex gap-6">
+                <span className="uppercase-label text-gray-400 flex items-center">
+                  <span>Coming Soon</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-12 gap-8">
+          {/* MAMA AI */}
+          <div className="md:col-span-6 md:col-start-4">
+            <div className="relative group cursor-pointer overflow-hidden">
+              <div className="aspect-[4/3] relative">
+                <Image 
                   src="/assets/MAMA AI.png" 
-                  alt="E-commerce Platform"
+                  alt="MAMA AI Project"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -399,7 +483,7 @@ export default function Home() {
                 MAMA AI aims to predict the maternal health risk level (high risk, mid risk, or low risk) using machine learning models. The goal is to build a predictive model that can help healthcare providers identify high-risk pregnancies early, enabling timely interventions to improve maternal outcomes.
               </p>
               <div className="flex flex-wrap gap-3 mb-6">
-                {['React', 'Node.js', 'MongoDB', 'Stripe API', 'AWS S3'].map((tech) => (
+                {['Python', 'Scikit-learn', 'Pandas', 'Jupyter Notebooks'].map((tech) => (
                   <span key={tech} className="px-3 py-1 text-xs border border-gray-200 bg-white">
                     {tech}
                   </span>
@@ -415,83 +499,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          
-          <div className="md:col-span-6">
-            <div className="relative group cursor-pointer overflow-hidden">
-              <div className="aspect-[4/3] relative">
-                <Image 
-                  src="/assets/smartres.png" 
-                  alt="Task Management App"
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-              </div>
-              <div className="portfolio-item-overlay">
-                <div className="text-center px-6">
-                  <h3 className="heading-sm text-white">AI Powered Platform for Job Seekers</h3>
-                </div>
-              </div>
-            </div>
-            <div className="mt-6">
-              <span className="uppercase-label text-accent mb-2 inline-block">Web App</span>
-              <h3 className="heading-sm mb-4">SmartRes.ai</h3>
-              <p className="body-text mb-6">
-                An AI-powered resume optimization tool that customizes resumes to match job descriptions using OpenAI’s GPT API. SmartRes.ai helps job seekers tailor their applications with precision by analyzing job postings and restructuring resumes for better alignment. Features include AI-driven resume enhancements, applications management, and an interview simulator.
-              </p>
-              <div className="flex flex-wrap gap-3 mb-6">
-                {['TypeScript', 'React', 'Socket.io', 'Express', 'PostgreSQL'].map((tech) => (
-                  <span key={tech} className="px-3 py-1 text-xs border border-gray-200 bg-white">
-                    {tech}
-                  </span>
-                ))}
-              </div>
-              <div className="flex gap-6">
-                <a href="https://smartres.ai/" className="uppercase-label text-accent hover:underline flex items-center">
-                  <span>View Demo</span>
-                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
         </div>
-        
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Project 3 */}
-          <div className="bg-white group cursor-pointer">
-            <div className="relative overflow-hidden">
-              <div className="aspect-square relative">
-                <Image 
-                  src="/assets/mockup.png" 
-                  alt="Fitness Tracker"
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                />
-              </div>
-              <div className="portfolio-item-overlay">
-                <div className="text-center px-6">
-                  <h3 className="heading-sm text-white">The First Social Media Designed to Take You Offline</h3>
-                </div>
-              </div>
-            </div>
-            <div className="p-6">
-              <span className="uppercase-label text-accent mb-2 inline-block">Mobile App</span>
-              <h3 className="heading-sm mb-2">MOVE Wellness Club</h3>
-              <p className="body-text">
-                Coming soon: MOVE is a mobile app and community that allows users to connect in a fun, social, wellness focused way. Users can post their “Moves” (events/activities) so that other users are able to join, bringing together large groups for things such as hikes, runs, games, etc. 
-              </p>
-            </div>
-          </div>
-        </div>
-        
-        {/* <div className="mt-16 text-center">
-          <a href="#" className="btn-secondary">
-            View All Projects
-          </a>
-        </div> */}
       </Section>
       
       {/* Education Section */}
