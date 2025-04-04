@@ -23,7 +23,7 @@ export default function Home() {
                 Creating digital experiences that make a difference
               </h1>
               <p className="body-text mb-10 max-w-xl">
-                I'm Lauryn Hudson,  a full-stack software engineer specializing in AI, data engineering, and scalable web applications. Currently building innovative fintech + ESG solutions at JP Morgan and <a href='https://smartres.ai/' className="text-blue-500 hover:text-blue-700 font-medium">SmartRes.ai</a>
+                I'm Lauryn Hudson,  a full-stack software engineer specializing in AI, data engineering, and scalable web applications. Currently building innovative fintech + ESG solutions at JP Morgan, <a href='https://smartres.ai/' className="text-blue-500 hover:text-blue-700 font-medium">SmartRes.ai</a> + <a href='https://agentzy.co/' className="text-blue-500 hover:text-blue-700 font-medium">Agentzy.co</a>
               </p>
               <div className="flex flex-wrap gap-5">
                 <Link 
@@ -374,7 +374,50 @@ export default function Home() {
         title="Featured Projects" 
         subtitle="A selection of my recent work showcasing my technical skills and problem-solving approach"
       >
+        {/* Row 1: Agentzy.co and SmartRes.ai */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
+          {/* Agentzy.co */}
+          <div className="md:col-span-6">
+            <div className="relative group cursor-pointer overflow-hidden">
+              <div className="aspect-[4/3] relative">
+                <Image 
+                  src="/assets/Agentzy.png" 
+                  alt="Agentzy.co AI Agency"
+                  fill
+                  className="object-contain transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
+              <div className="portfolio-item-overlay">
+                <div className="text-center px-6">
+                  <h3 className="heading-sm text-white">AI Agency for Business Automation</h3>
+                </div>
+              </div>
+            </div>
+            <div className="mt-6">
+              <span className="uppercase-label text-accent mb-2 inline-block">AI Agency</span>
+              <h3 className="heading-sm mb-4">Agentzy.co</h3>
+              <p className="body-text mb-6">
+                An AI agency helping ambitious businesses reclaim their time, cut unnecessary costs, and grow faster by integrating AI and automation into the core of their operations. We build custom AI solutions that streamline processes, enhance customer experiences, and drive business growth.
+              </p>
+              <div className="flex flex-wrap gap-3 mb-6">
+                {['LangChain', 'OpenAI GPT', 'TypeScript', 'Python', 'AWS', 'Docker', 'React'].map((tech) => (
+                  <span key={tech} className="px-3 py-1 text-xs border border-gray-200 bg-white">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+              <div className="flex gap-6">
+                <a href="https://agentzy.co/" className="uppercase-label text-accent hover:underline flex items-center">
+                  <span>Visit Website</span>
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
           {/* SmartRes.ai */}
           <div className="md:col-span-6">
             <div className="relative group cursor-pointer overflow-hidden">
@@ -416,7 +459,10 @@ export default function Home() {
               </div>
             </div>
           </div>
-          
+        </div>
+        
+        {/* Row 2: MOVE and MAMA AI side by side */}
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-12 gap-12">
           {/* MOVE */}
           <div className="md:col-span-6">
             <div className="relative group cursor-pointer overflow-hidden">
@@ -455,11 +501,9 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
-        
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-12 gap-8">
+          
           {/* MAMA AI */}
-          <div className="md:col-span-6 md:col-start-4">
+          <div className="md:col-span-6">
             <div className="relative group cursor-pointer overflow-hidden">
               <div className="aspect-[4/3] relative">
                 <Image 
