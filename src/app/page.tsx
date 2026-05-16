@@ -11,7 +11,7 @@ export default function Home() {
           <span className="status">available for select opportunities</span>
         </div>
         <div className="right">
-          <a href="#contact">New York, NY · 2026 ↗</a>
+          <a href="#contact">Los Angeles, CA · 2026 ↗</a>
         </div>
       </header>
 
@@ -44,12 +44,12 @@ export default function Home() {
       <footer className="contact reveal d5" id="contact">
         <div className="caps">Get in touch</div>
         <div className="links">
-          <a className="primary" href="mailto:lauryn@laurynhudson.com">
-            lauryn@laurynhudson.com <span className="arrow">→</span>
+          <a className="primary" href="mailto:lauryn@movewellnessclub.com">
+            lauryn@movewellnessclub.com <span className="arrow">→</span>
           </a>
           <a
             className="secondary underline-link"
-            href="https://linkedin.com/in/laurynhudson"
+            href="https://linkedin.com/in/lauryn-hudson"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -57,19 +57,11 @@ export default function Home() {
           </a>
           <a
             className="secondary underline-link"
-            href="https://instagram.com/laurynhudson"
+            href="https://instagram.com/movewellnessclub"
             target="_blank"
             rel="noopener noreferrer"
           >
             Instagram
-          </a>
-          <a
-            className="secondary underline-link"
-            href="https://x.com/laurynhudson"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            X
           </a>
         </div>
       </footer>
