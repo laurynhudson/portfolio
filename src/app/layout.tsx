@@ -1,27 +1,40 @@
-import { Cormorant, Montserrat } from 'next/font/google';
+import { Bricolage_Grotesque, Schibsted_Grotesk, Instrument_Serif, JetBrains_Mono } from 'next/font/google';
 import '@/styles/globals.css';
 import type { Metadata } from 'next';
 import React from 'react';
 
-// Using Cormorant as a replacement for Freight Display Pro
-const freight = Cormorant({
+const bricolage = Bricolage_Grotesque({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-freight',
-  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-bricolage',
+  weight: ['400', '500', '600', '700', '800'],
 });
 
-// Using Montserrat as a replacement for Futura PT
-const futura = Montserrat({
+const schibsted = Schibsted_Grotesk({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-futura',
-  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-schibsted',
+  weight: ['400', '500', '600', '700'],
+});
+
+const instrument = Instrument_Serif({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-instrument',
+  weight: ['400'],
+  style: ['normal', 'italic'],
+});
+
+const jetbrains = JetBrains_Mono({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-jetbrains',
+  weight: ['400', '500'],
 });
 
 export const metadata: Metadata = {
-  title: 'Lauryn Hudson | Software Engineer',
-  description: 'Professional portfolio of Lauryn Hudson, Software Engineer specializing in full-stack development.',
+  title: 'Lauryn Hudson',
+  description: 'Lauryn Hudson — Cofounder & CEO of MOVE Wellness Club. Software Engineer, Community Builder, Speaker.',
   icons: {
     icon: '/assets/LH.png',
     apple: '/assets/LH.png',
@@ -34,10 +47,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${futura.variable} ${freight.variable}`}>
-      <body className="text-text-primary bg-white">
-        {children}
-      </body>
+    <html
+      lang="en"
+      className={`${bricolage.variable} ${schibsted.variable} ${instrument.variable} ${jetbrains.variable}`}
+    >
+      <body>{children}</body>
     </html>
   );
 }
