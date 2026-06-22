@@ -1,4 +1,38 @@
 import Image from 'next/image';
+import Reveal from '@/components/Reveal';
+
+// ── editable content ──────────────────────────────────────────
+// Paste your real Substack URL here.
+const SUBSTACK_URL = 'https://substack.com/@laurynhudson';
+
+const travel = [
+  { src: '/assets/travel.png', place: 'Giza, Egypt', note: 'The Great Pyramids' },
+  { src: '/assets/xula.jpg', place: 'New Orleans, LA', note: 'Homecoming, Xavier University' },
+];
+
+const ventures = [
+  {
+    name: 'Agentzy',
+    role: 'Engineering',
+    blurb: 'Tooling for autonomous AI agents.',
+    src: '/assets/Agentzy.png',
+    href: '',
+  },
+  {
+    name: 'smartres.ai',
+    role: 'Engineering',
+    blurb: 'AI platform for smarter reservations.',
+    src: '/assets/smartres.png',
+    href: '',
+  },
+  {
+    name: 'MAMA AI',
+    role: 'Machine Learning',
+    blurb: 'Maternal health risk modeling.',
+    src: '/assets/MAMA AI.png',
+    href: '',
+  },
+];
 
 export default function Home() {
   return (
@@ -10,9 +44,12 @@ export default function Home() {
           <span className="sep">—</span>
           <span className="status">available for select opportunities</span>
         </div>
-        <div className="right">
-          <a href="#contact">Los Angeles, CA · 2026 ↗</a>
-        </div>
+        <nav className="util-nav" aria-label="Sections">
+          <a href="#about">About</a>
+          <a href="#work">Work</a>
+          <a href="#writing">Writing</a>
+          <a href="#contact">Contact</a>
+        </nav>
       </header>
 
       <main className="hero">
@@ -41,7 +78,153 @@ export default function Home() {
         <span className="pill">Speaker</span>
       </section>
 
-      <footer className="contact reveal d5" id="contact">
+      {/* ── About ─────────────────────────────────────────── */}
+      <section className="section about" id="about" aria-labelledby="about-h">
+        <Reveal className="section-head">
+          <span className="caps">01 — About</span>
+        </Reveal>
+
+        <div className="about-grid">
+          <Reveal className="about-copy">
+            <h2 id="about-h" className="lede">
+              Engineer by training, founder by conviction.
+            </h2>
+            <p>
+              I&apos;m Lauryn — a software engineer turned founder building MOVE,
+              the social platform designed to pull people off their screens and
+              into real life. I care about technology that makes the world feel
+              smaller and more human, not louder.
+            </p>
+            <p>
+              Before MOVE I shipped across AI and consumer products — from
+              maternal-health risk modeling to agent tooling. A New Orleans and
+              Xavier University foundation shapes how I build: community first,
+              craft always. Today I&apos;m based in Los Angeles, writing,
+              speaking, and building in public.
+            </p>
+          </Reveal>
+
+          <Reveal className="about-portrait" delay={80}>
+            <Image
+              src="/assets/lh_headshot.png"
+              alt="Lauryn Hudson"
+              width={520}
+              height={620}
+              className="portrait-img"
+            />
+          </Reveal>
+        </div>
+
+        <Reveal className="travel" delay={60}>
+          <div className="travel-head">
+            <span className="caps">Off the clock</span>
+            <span className="mono">Recently — on the road</span>
+          </div>
+          <div className="travel-strip">
+            {travel.map((t) => (
+              <figure className="thumb" key={t.src}>
+                <div className="thumb-img">
+                  <Image
+                    src={t.src}
+                    alt={`${t.note}, ${t.place}`}
+                    width={420}
+                    height={520}
+                  />
+                </div>
+                <figcaption>
+                  <span className="thumb-place">{t.place}</span>
+                  <span className="thumb-note">{t.note}</span>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </Reveal>
+      </section>
+
+      {/* ── Work & ventures ───────────────────────────────── */}
+      <section className="section work" id="work" aria-labelledby="work-h">
+        <Reveal className="section-head">
+          <span className="caps">02 — Work &amp; ventures</span>
+          <h2 id="work-h" className="section-title">
+            What I&apos;m building.
+          </h2>
+        </Reveal>
+
+        <Reveal className="feature" delay={40}>
+          <div className="feature-copy">
+            <span className="caps accent">Cofounder &amp; CEO</span>
+            <h3 className="feature-name">MOVE</h3>
+            <p className="feature-blurb">
+              The first social platform designed to take you offline. MOVE turns
+              connection into something you do in real life — not something you
+              scroll past.
+            </p>
+            <span className="feature-tag mono">Consumer social · IRL</span>
+          </div>
+          <div className="feature-media">
+            <Image
+              src="/assets/mockup.png"
+              alt="MOVE app mockup"
+              width={600}
+              height={540}
+              className="feature-img"
+            />
+          </div>
+        </Reveal>
+
+        <Reveal className="ventures-grid" delay={60}>
+          {ventures.map((v) => {
+            const Card = v.href ? 'a' : 'div';
+            return (
+              <Card
+                key={v.name}
+                className="venture"
+                {...(v.href
+                  ? { href: v.href, target: '_blank', rel: 'noopener noreferrer' }
+                  : {})}
+              >
+                <div className="venture-logo">
+                  <Image src={v.src} alt={`${v.name} logo`} width={240} height={120} />
+                </div>
+                <div className="venture-meta">
+                  <span className="venture-name">{v.name}</span>
+                  <span className="venture-role mono">{v.role}</span>
+                  <span className="venture-blurb">{v.blurb}</span>
+                </div>
+              </Card>
+            );
+          })}
+        </Reveal>
+      </section>
+
+      {/* ── Writing / Substack ────────────────────────────── */}
+      <section className="section writing" id="writing" aria-labelledby="writing-h">
+        <Reveal className="section-head">
+          <span className="caps">03 — Writing</span>
+        </Reveal>
+
+        <Reveal className="writing-card" delay={40}>
+          <div className="writing-copy">
+            <span className="caps accent">On Substack</span>
+            <h2 id="writing-h" className="writing-title">
+              Notes on building, in real life.
+            </h2>
+            <p>
+              Essays on founding, engineering, and the case for living offline —
+              published when I have something worth saying.
+            </p>
+            <a className="btn" href={SUBSTACK_URL} target="_blank" rel="noopener noreferrer">
+              Read the Substack <span className="arrow">→</span>
+            </a>
+          </div>
+          <div className="writing-aside" aria-hidden="true">
+            <span className="writing-mark">✺</span>
+          </div>
+        </Reveal>
+      </section>
+
+      {/* ── Contact ───────────────────────────────────────── */}
+      <footer className="contact" id="contact">
         <div className="caps">Get in touch</div>
         <div className="links">
           <a className="primary" href="mailto:lauryn@movewellnessclub.com">
@@ -62,6 +245,14 @@ export default function Home() {
             rel="noopener noreferrer"
           >
             Instagram
+          </a>
+          <a
+            className="secondary underline-link"
+            href={SUBSTACK_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Substack
           </a>
         </div>
       </footer>
