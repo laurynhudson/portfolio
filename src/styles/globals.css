@@ -455,9 +455,26 @@ h1.name .stop {
   max-width: 42ch;
 }
 .feature-tag {
-  display: inline-block;
+  display: block;
   margin-top: 22px;
 }
+.feature-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 22px;
+  font-family: var(--body);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: -0.005em;
+  color: var(--accent);
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+  padding-bottom: 2px;
+  transition: border-color 200ms ease;
+}
+.feature-link .arrow { transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1); }
+.feature-link:hover { border-color: var(--accent); }
+.feature-link:hover .arrow { transform: translateX(4px); }
 .feature-media {
   border-radius: 14px;
   overflow: hidden;
@@ -468,61 +485,29 @@ h1.name .stop {
   display: block;
   border-radius: 12px;
 }
-
-.ventures-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: clamp(14px, 1.8vw, 22px);
-  margin-top: clamp(16px, 2vw, 22px);
-}
-.venture {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid var(--rule);
-  border-radius: 16px;
-  background: #fff;
-  overflow: hidden;
-  transition: border-color 220ms ease, transform 220ms ease;
-}
-a.venture:hover {
-  border-color: var(--ink);
-  transform: translateY(-3px);
-}
-.venture-logo {
-  height: 132px;
+/* reversed rhythm: copy right, media left (desktop only) */
+.feature.reverse .feature-copy { order: 2; }
+.feature.reverse .feature-media { order: 1; }
+/* typographic panel for ventures without a logo asset */
+.feature-media.wordmark {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 24px;
-  background: #faf9f6;
-  border-bottom: 1px solid var(--rule);
+  min-height: 260px;
+  background:
+    radial-gradient(130% 130% at 25% 15%,
+      color-mix(in srgb, var(--accent) 22%, transparent), transparent 58%),
+    #0f1115;
 }
-.venture-logo img {
-  max-width: 100%;
-  max-height: 84px;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-}
-.venture-meta {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  padding: 18px 20px 22px;
-}
-.venture-name {
+.feature-media.wordmark span {
   font-family: var(--display);
-  font-weight: 600;
-  font-size: 20px;
-  letter-spacing: -0.02em;
+  font-weight: 700;
+  font-size: clamp(56px, 9vw, 112px);
+  letter-spacing: -0.05em;
+  color: color-mix(in srgb, var(--paper) 92%, transparent);
 }
-.venture-role { color: var(--accent); }
-.venture-blurb {
-  font-family: var(--body);
-  font-size: 14px;
-  line-height: 1.5;
-  color: var(--soft);
-}
+
+.feature + .feature { margin-top: clamp(16px, 2.4vw, 28px); }
 
 /* ── writing / substack ────────────────────────────────── */
 .writing-card {

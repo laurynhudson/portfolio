@@ -10,30 +10,6 @@ const travel = [
   { src: '/assets/xula.jpg', place: 'New Orleans, LA', note: 'Homecoming, Xavier University' },
 ];
 
-const ventures = [
-  {
-    name: 'Agentzy',
-    role: 'Engineering',
-    blurb: 'Tooling for autonomous AI agents.',
-    src: '/assets/Agentzy.png',
-    href: '',
-  },
-  {
-    name: 'smartres.ai',
-    role: 'Engineering',
-    blurb: 'AI platform for smarter reservations.',
-    src: '/assets/smartres.png',
-    href: '',
-  },
-  {
-    name: 'MAMA AI',
-    role: 'Machine Learning',
-    blurb: 'Maternal health risk modeling.',
-    src: '/assets/MAMA AI.png',
-    href: '',
-  },
-];
-
 export default function Home() {
   return (
     <>
@@ -160,6 +136,14 @@ export default function Home() {
               scroll past.
             </p>
             <span className="feature-tag mono">Consumer social · IRL</span>
+            <a
+              className="feature-link"
+              href="https://movewellnessclub.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              movewellnessclub.com <span className="arrow">→</span>
+            </a>
           </div>
           <div className="feature-media">
             <Image
@@ -172,28 +156,27 @@ export default function Home() {
           </div>
         </Reveal>
 
-        <Reveal className="ventures-grid" delay={60}>
-          {ventures.map((v) => {
-            const Card = v.href ? 'a' : 'div';
-            return (
-              <Card
-                key={v.name}
-                className="venture"
-                {...(v.href
-                  ? { href: v.href, target: '_blank', rel: 'noopener noreferrer' }
-                  : {})}
-              >
-                <div className="venture-logo">
-                  <Image src={v.src} alt={`${v.name} logo`} width={240} height={120} />
-                </div>
-                <div className="venture-meta">
-                  <span className="venture-name">{v.name}</span>
-                  <span className="venture-role mono">{v.role}</span>
-                  <span className="venture-blurb">{v.blurb}</span>
-                </div>
-              </Card>
-            );
-          })}
+        <Reveal className="feature reverse" delay={60}>
+          <div className="feature-copy">
+            <span className="caps accent">Founder</span>
+            <h3 className="feature-name">tidal</h3>
+            <p className="feature-blurb">
+              {/* TODO: replace with the real one-line description of tidal */}
+              A technology venture building what&apos;s next.
+            </p>
+            <span className="feature-tag mono">Technology</span>
+            <a
+              className="feature-link"
+              href="https://tidaltech.co/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              tidaltech.co <span className="arrow">→</span>
+            </a>
+          </div>
+          <div className="feature-media wordmark" aria-hidden="true">
+            <span>tidal</span>
+          </div>
         </Reveal>
       </section>
 
