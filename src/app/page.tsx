@@ -33,9 +33,6 @@ export default function Home() {
         <h1 className="name reveal d3">
           Lauryn Hudson<span className="stop">.</span>
         </h1>
-        <p className="tagline reveal d4">
-          Building the social platform designed to take you IRL.
-        </p>
       </main>
 
       <section className="roles reveal d4" aria-label="Roles">
