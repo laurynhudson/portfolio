@@ -340,7 +340,7 @@ h1.name .stop {
   display: grid;
   grid-template-columns: 1.45fr 1fr;
   gap: clamp(32px, 6vw, 80px);
-  align-items: start;
+  align-items: center;
 }
 .about-copy .lede {
   margin: 0 0 clamp(20px, 3vw, 32px);
