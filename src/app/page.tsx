@@ -7,7 +7,10 @@ const SUBSTACK_URL = 'https://laurynhudson.substack.com/';
 
 const travel = [
   { src: '/assets/travel.png', place: 'Giza, Egypt', note: 'The Great Pyramids' },
-  { src: '/assets/xula.jpg', place: 'New Orleans, LA', note: 'Homecoming, Xavier University' },
+  { src: '/assets/athens.jpg', place: 'Athens, Greece', note: 'Acropolis of Athens' },
+  { src: '/assets/mykonos.jpg', place: 'Mykonos, Greece', note: 'Windmills of Mykonos'},
+  { src: '/assets/paris.jpg', place: 'Paris, France', note: 'Eiffel Tower'},
+  { src: '/assets/mona.jpg', place: 'Paris, France', note: 'Mona Lisa'},
 ];
 
 export default function Home() {
