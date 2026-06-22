@@ -3,7 +3,7 @@ import Reveal from '@/components/Reveal';
 
 // ── editable content ──────────────────────────────────────────
 // Paste your real Substack URL here.
-const SUBSTACK_URL = 'https://substack.com/@laurynhudson';
+const SUBSTACK_URL = 'https://laurynhudson.substack.com/';
 
 const travel = [
   { src: '/assets/travel.png', place: 'Giza, Egypt', note: 'The Great Pyramids' },
