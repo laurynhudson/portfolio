@@ -66,17 +66,22 @@ export default function Home() {
               Engineer by training, founder by conviction.
             </h2>
             <p>
-              I&apos;m Lauryn — a software engineer turned founder building MOVE,
-              the social platform designed to pull people off their screens and
-              into real life. I care about technology that makes the world feel
-              smaller and more human, not louder.
+              I’m Lauryn — a software engineer, entrepreneur, and community builder based in Los Angeles.
             </p>
             <p>
-              Before MOVE I shipped across AI and consumer products — from
-              maternal-health risk modeling to agent tooling. A New Orleans and
-              Xavier University foundation shapes how I build: community first,
-              craft always. Today I&apos;m based in Los Angeles, writing,
-              speaking, and building in public.
+              Over the past several years, I’ve built products across fintech, AI, and consumer technology. 
+              I’ve worked as a software engineer at JPMorgan, where I helped build technology for sustainable 
+              investing and personalized portfolio management, and later as a Founding Engineer at an 
+              AI startup building voice agents for the construction industry. 
+            </p>
+            <p>
+              Today, I’m the founder of MOVE, a platform designed to pull people off their screens and into real life. 
+              The idea came from a simple belief: technology should help people connect 
+              more deeply with the world around them, not spend more time disconnected from it.
+            </p>
+            <p>
+              When I’m not building, you’ll usually find me training for a HYROX race, 
+              teaching yoga, traveling the world, or documenting the founder journey in public.
             </p>
           </Reveal>
 
@@ -148,7 +153,7 @@ export default function Home() {
           <div className="feature-media">
             <Image
               src="/assets/mockup.png"
-              alt="MOVE app mockup"
+              alt="MOVE icon"
               width={600}
               height={540}
               className="feature-img"
@@ -158,11 +163,10 @@ export default function Home() {
 
         <Reveal className="feature reverse" delay={60}>
           <div className="feature-copy">
-            <span className="caps accent">Founder</span>
-            <h3 className="feature-name">tidal</h3>
+            <span className="caps accent">Partner</span>
+            <h3 className="feature-name">Tidal</h3>
             <p className="feature-blurb">
-              {/* TODO: replace with the real one-line description of tidal */}
-              A technology venture building what&apos;s next.
+              We're the strategic technology partner helping companies become AI-native.
             </p>
             <span className="feature-tag mono">Technology</span>
             <a
@@ -174,8 +178,14 @@ export default function Home() {
               tidaltech.co <span className="arrow">→</span>
             </a>
           </div>
-          <div className="feature-media wordmark" aria-hidden="true">
-            <span>tidal</span>
+          <div className="feature-media">
+            <Image
+              src="/assets/tidal.png"
+              alt="tidal logo"
+              width={600}
+              height={540}
+              className="feature-img"
+            />
           </div>
         </Reveal>
       </section>
