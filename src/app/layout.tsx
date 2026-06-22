@@ -36,8 +36,8 @@ export const metadata: Metadata = {
   title: 'Lauryn Hudson',
   description: 'Lauryn Hudson — Cofounder & CEO of MOVE Wellness Club. Software Engineer, Community Builder, Speaker.',
   icons: {
-    icon: '/assets/lh_headshot.png',
-    apple: '/assets/lh_headshot.png',
+    icon: '/assets/lh_headshot.jpg',
+    apple: '/assets/lh_headshot.jpg',
   },
 };
 

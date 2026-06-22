@@ -38,7 +38,7 @@ export default function Home() {
       <section className="roles reveal d4" aria-label="Roles">
         <span className="avatar" aria-hidden="true">
           <Image
-            src="/assets/lh_headshot.png"
+            src="/assets/lh_headshot.jpg"
             alt=""
             width={56}
             height={56}
@@ -79,7 +79,7 @@ export default function Home() {
 
           <Reveal className="about-portrait" delay={80}>
             <Image
-              src="/assets/lh_headshot.png"
+              src="/assets/lh_headshot.jpg"
               alt="Lauryn Hudson"
               width={520}
               height={620}
