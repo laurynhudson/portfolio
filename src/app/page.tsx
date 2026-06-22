@@ -54,7 +54,7 @@ export default function Home() {
       {/* ── About ─────────────────────────────────────────── */}
       <section className="section about" id="about" aria-labelledby="about-h">
         <Reveal className="section-head">
-          <span className="caps">01 — About</span>
+          <span className="caps">About</span>
         </Reveal>
 
         <div className="about-grid">
@@ -117,7 +117,7 @@ export default function Home() {
       {/* ── Work & ventures ───────────────────────────────── */}
       <section className="section work" id="work" aria-labelledby="work-h">
         <Reveal className="section-head">
-          <span className="caps">02 — Work &amp; ventures</span>
+          <span className="caps">Work &amp; ventures</span>
           <h2 id="work-h" className="section-title">
             What I&apos;m building.
           </h2>
@@ -180,7 +180,7 @@ export default function Home() {
       {/* ── Writing / Substack ────────────────────────────── */}
       <section className="section writing" id="writing" aria-labelledby="writing-h">
         <Reveal className="section-head">
-          <span className="caps">03 — Writing</span>
+          <span className="caps">Writing</span>
         </Reveal>
 
         <Reveal className="writing-card" delay={40}>
