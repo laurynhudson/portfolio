@@ -367,6 +367,7 @@ h1.name .stop {
   overflow: hidden;
   background: #ece9e2;
   border: 1px solid var(--rule);
+  margin-top: 100px;
 }
 .portrait-img {
   width: 100%;

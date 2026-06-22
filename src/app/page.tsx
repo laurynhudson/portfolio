@@ -81,7 +81,7 @@ export default function Home() {
             </p>
             <p>
               When I’m not building, you’ll usually find me training for a HYROX race, 
-              teaching yoga, traveling the world, or documenting the founder journey in public.
+              practicing yoga, traveling the world, or documenting the founder journey in public.
             </p>
           </Reveal>
 
@@ -200,11 +200,10 @@ export default function Home() {
           <div className="writing-copy">
             <span className="caps accent">On Substack</span>
             <h2 id="writing-h" className="writing-title">
-              Notes on building, in real life.
+              Notes on becoming.
             </h2>
             <p>
-              Essays on founding, engineering, and the case for living offline —
-              published when I have something worth saying.
+              Essays on ambition, philosophy, community, and building a life that feels fully your own.
             </p>
             <a className="btn" href={SUBSTACK_URL} target="_blank" rel="noopener noreferrer">
               Read the Substack <span className="arrow">→</span>
