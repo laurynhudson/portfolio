@@ -200,9 +200,21 @@ export default function Home() {
               Read the Substack <span className="arrow">→</span>
             </a>
           </div>
-          <div className="writing-aside" aria-hidden="true">
-            <span className="writing-mark">✺</span>
-          </div>
+          <a
+            className="writing-aside"
+            href={SUBSTACK_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Lo & Behold on Substack"
+          >
+            <Image
+              src="/assets/lobehold.png"
+              alt="Lo & Behold"
+              width={420}
+              height={420}
+              className="writing-logo"
+            />
+          </a>
         </Reveal>
       </section>
 
